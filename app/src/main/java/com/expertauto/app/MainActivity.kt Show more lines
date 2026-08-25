@@ -1,0 +1,31 @@
+package com.expertauto.app
+
+import android.os.Bundle
+import android.widget.Button
+import android.widget.LinearLayout
+import androidx.appcompat.app.AppCompatActivity
+
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        val layout = LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(40, 40, 40, 40)
+        }
+
+        val newFileButton = Button(this).apply {
+            text = "📁 ملف جديد"
+        }
+
+        val continueButton = Button(this).apply {
+            text = "📂 مواصلة ملف سابق"
+        }
+
+        layout.addView(newFileButton)
+        layout.addView(continueButton)
+
+        setContentView(layout)
+    }
+}
