@@ -16,4 +16,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "ExpertAuto"
-include(":app")
+include(":app").
