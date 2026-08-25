@@ -1,0 +1,15 @@
+workflows:
+  android-debug:
+    name: Android Debug Build
+
+    environment:
+      vars:
+        PACKAGE_NAME: "com.expertauto.app"
+
+    scripts:
+      - name: Build Debug APK
+        script: |
+          ./gradlew assembleDebug
+
+    artifacts:
+      - app/build/outputs/**/*.apk
